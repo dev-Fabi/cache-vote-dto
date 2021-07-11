@@ -5,17 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && tsc",
-    "lint": "eslint \"src/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
     "clean": "rimraf \"lib/*\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run lint && npm run git:stash:push",
-    "postpublish": "npm run git:stash:pop",
-    "preversion": "npm run lint && npm run git:stash:push",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags && npm run git:stash:pop",
-    "git:stash:push": "git stash push -m stash_during_verison_bump -u",
-    "git:stash:pop": "git stash pop"
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "postversion": "git push --tags"
   },
   "repository": {
     "type": "git",
