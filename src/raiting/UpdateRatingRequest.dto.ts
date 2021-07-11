@@ -1,4 +1,4 @@
-import { IsInt, IsString, Matches, Max, Min } from "class-validator";
+import { IsInt, IsString, Matches, Max, Min } from 'class-validator';
 
 export class UpdateRatingRequestDto {
   @IsString()
