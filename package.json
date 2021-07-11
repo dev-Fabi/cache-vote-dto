@@ -1,6 +1,6 @@
 {
   "name": "@dev-fabi/cache-vote-dto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Data Transfer Objects for the CacheVote API",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
