@@ -1,0 +1,53 @@
+{
+  "name": "@dev-fabi/cache-vote-dto",
+  "version": "0.0.1",
+  "description": "Data Transfer Objects for the CacheVote API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "clean": "rimraf \"lib/*\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run git:stash:push",
+    "postpublish": "npm run git:stash:pop",
+    "preversion": "npm run lint && npm run git:stash:push",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags && npm run git:stash:pop",
+    "git:stash:push": "git stash push -m stash_during_verison_bump -u",
+    "git:stash:pop": "git stash pop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-Fabi/cache-vote-dto.git"
+  },
+  "keywords": [
+    "CacheVote",
+    "Geocaching"
+  ],
+  "author": "Fabian Schedler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-Fabi/cache-vote-dto/issues"
+  },
+  "homepage": "https://github.com/dev-Fabi/cache-vote-dto#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "class-validator": "^0.13.1"
+  }
+}
