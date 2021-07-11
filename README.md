@@ -8,11 +8,12 @@ Replace `TOKEN` with your personal GitHub access token
 
 ```text
 //npm.pkg.github.com/:_authToken=TOKEN
+@dev-fabi:registry=https://npm.pkg.github.com
 ```
 
 ## Install
 ````shell
-npm install github:dev-Fabi/cache-vote-dto
+npm install @dev-Fabi/cache-vote-dto
 ````
 
 ## Publish
