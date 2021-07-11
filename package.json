@@ -2,6 +2,7 @@
   "name": "@dev-fabi/cache-vote-dto",
   "version": "1.0.0",
   "description": "Data Transfer Objects for the CacheVote API",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && tsc",
@@ -31,9 +32,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "files": [
-    "lib/**/*"
-  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
