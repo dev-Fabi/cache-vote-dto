@@ -18,7 +18,7 @@ Replace `TOKEN` with your personal GitHub access token
 $ npm install @dev-Fabi/cache-vote-dto
 ````
 
-### 
+### 'Npm clone'
 You can use the package also without issuing a Personal GitHub token as npm has the ability to clone repositories.
 To do so use following command. (It will take some time as the repository needs to be cloned and build first)
 
